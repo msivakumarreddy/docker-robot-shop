@@ -1,0 +1,16 @@
+version: 2
+services:
+  web:
+    image: web:v1
+    ports:
+    - "80:80"
+  catalogue: 
+    image: catalogue:v1
+    ports:
+    - "8080:8080"
+  mongodb:
+    image: mongodb:v1
+    ports:
+    - "27017:27017"
+
+
