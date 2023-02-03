@@ -4,12 +4,17 @@ services:
     image: web:v1
     ports:
     - "80:80"
+    container_name: web
   catalogue: 
     image: catalogue:v1
+    container_name: catalogue
     ports:
     - "8080:8080"
+    environment:
+      MONGO_URL: mongodb://mongodb:27017/catalogue
   mongodb:
     image: mongodb:v1
+    container_name: mongodb 
     ports:
     - "27017:27017"
 
