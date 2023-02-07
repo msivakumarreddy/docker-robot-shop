@@ -47,5 +47,9 @@ services:
     - mysql
     ports:
     - "8080"
+  mysql:
+    image: mysql:v1
+    container_name: mysql
+    
 
 
