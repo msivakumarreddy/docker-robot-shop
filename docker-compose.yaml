@@ -4,6 +4,7 @@ services:
     image: web:v1
     depends_on:
     - catalogue
+    - shipping
     ports:
     - "80:80"
     container_name: web
@@ -39,13 +40,13 @@ services:
     depends_on:
     - catalogue
     - redis
-  # shipping:
-  #   image: shipping:v1
-  #   container_name: shipping
-  #   depends_on:
-  #   - mysql
-  #   ports:
-  #   - "8080"
+  shipping:
+    image: shipping:v1
+    container_name: shipping
+    depends_on:
+    - mysql
+    ports:
+    - "8080"
   mysql:
     image: mysql:v1
     container_name: mysql
