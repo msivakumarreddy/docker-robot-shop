@@ -40,13 +40,13 @@ services:
     - catalogue
     - redis
     - shipping
-  shipping:
-    image: shipping:v1
-    container_name: shipping
-    depends_on:
-    - mysql
-    ports:
-    - "8080"
+  # shipping:
+  #   image: shipping:v1
+  #   container_name: shipping
+  #   depends_on:
+  #   - mysql
+  #   ports:
+  #   - "8080"
   mysql:
     image: mysql:v1
     container_name: mysql
