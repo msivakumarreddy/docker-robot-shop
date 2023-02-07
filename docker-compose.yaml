@@ -52,6 +52,11 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root123
+  rabbitmq:
+    image: rabbitmq:3.7-management-alpine
+    ports:
+      - "5672"
+      - "15672:15672"
 
 
 
