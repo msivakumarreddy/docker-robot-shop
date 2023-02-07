@@ -31,5 +31,13 @@ services:
     - "8080"
   redis:
     image: redis
+  cart:
+    image: cart:v1
+    container_name: cart
+    ports:
+    - "8080"
+    depends_on:
+    - catalogue
+    - redis
 
 
