@@ -39,9 +39,12 @@ services:
     depends_on:
     - catalogue
     - redis
+    - shipping
   shipping:
     image: shipping:v1
     container_name: shipping
+    depends_on:
+    - mysql
     ports:
     - "8080"
 
